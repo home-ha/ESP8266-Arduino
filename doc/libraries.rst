@@ -11,7 +11,7 @@ ESP8266WiFi library has been developed basing on ESP8266 SDK, using naming conve
 Ticker
 ------
 
-Library for calling functions repeatedly with a certain period. `Two examples <https://github.com/esp8266/Arduino/tree/master/libraries/Ticker/examples>`__ included.
+Library for calling functions repeatedly with a certain period. `Three examples <https://github.com/esp8266/Arduino/tree/master/libraries/Ticker/examples>`__ included.
 
 It is currently not recommended to do blocking IO operations (network, serial, file) from Ticker callback functions. Instead, set a flag inside the ticker callback and check for that flag inside the loop function.
 
@@ -158,7 +158,7 @@ Libraries that don't rely on low-level access to AVR registers should work well.
 -  `arduinoVNC <https://github.com/Links2004/arduinoVNC>`__ - VNC Client for Arduino
 -  `arduinoWebSockets <https://github.com/Links2004/arduinoWebSockets>`__ - WebSocket Server and Client compatible with ESP8266 (RFC6455)
 -  `aREST <https://github.com/marcoschwartz/aREST>`__ - REST API handler library.
--  `Blynk <https://github.com/blynkkk/blynk-library>`__ - easy IoT framework for Makers (check out the `Kickstarter page <http://tiny.cc/blynk-kick>`__).
+-  `Blynk <https://github.com/blynkkk/blynk-library>`__ - easy IoT framework for Makers (check out the `Kickstarter page <https://tiny.cc/blynk-kick>`__).
 -  `DallasTemperature <https://github.com/milesburton/Arduino-Temperature-Control-Library.git>`__
 -  `DHT-sensor-library <https://github.com/adafruit/DHT-sensor-library>`__ - Arduino library for the DHT11/DHT22 temperature and humidity sensors. Download latest v1.1.1 library and no changes are necessary. Older versions should initialize DHT as follows: ``DHT dht(DHTPIN, DHTTYPE, 15)``
 -  `DimSwitch <https://github.com/krzychb/DimSwitch>`__ - Control electronic dimmable ballasts for fluorescent light tubes remotely as if using a wall switch.

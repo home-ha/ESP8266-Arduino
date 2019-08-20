@@ -29,12 +29,15 @@
  DEALINGS WITH THE SOFTWARE.
 */
 
+#define CORE_MOCK 1
+
 // include host's STL before any other include file
 // because core definition like max() is in the way
 
 #ifdef __cplusplus
 #include <vector>
 #endif
+#include <stddef.h>
 
 
 #ifdef __cplusplus
@@ -47,6 +50,8 @@ char* ltoa (long val, char *s, int radix);
 }
 #endif
 
+size_t strlcat(char *dst, const char *src, size_t size);
+size_t strlcpy(char *dst, const char *src, size_t size);
 
 // exotic typedefs used in the sdk
 
@@ -129,16 +134,14 @@ void mockUDPSwallow (size_t copied, char* ccinbuf, size_t& ccinbufsize);
 class UdpContext;
 void register_udp (int sock, UdpContext* udp = nullptr);
 
-class InterruptLock { };
-
 //
 
 void mock_start_spiffs (const String& fname, size_t size_kb, size_t block_kb = 8, size_t page_b = 512);
 void mock_stop_spiffs ();
+void mock_start_littlefs (const String& fname, size_t size_kb, size_t block_kb = 8, size_t page_b = 512);
+void mock_stop_littlefs ();
 
 //
-
-#define CORE_MOCK 1
 
 #define ARDUINO 267
 #define ESP8266 1
